@@ -1,0 +1,48 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+  
+  
+        <form [formGroup]="myFormValidation" class="form-control">
+  
+  
+      <div class="form-control ">
+        <label for="formGroupExampleInput" class="col-lg-2  col-sm-6 ">Name</label>
+        <input formControlName="name" type="text" class="form-control col-sm-12 rounded w-50" id="formGroupExampleInput" placeholder="Name">
+      </div>
+  
+      <div *ngIf="!NameValid">
+        Name must have more than 3 characters
+      </div>
+      <br>
+      <div class="form-control">
+        <label for="formGroupExampleInput" class="col-lg-2 col-sm-6">Age</label>
+        <input formControlName="age" type="number" class=" col-sm-12 form-control rounded w-50" id="formGroupExampleInput" placeholder="Age">
+      </div>
+  
+      <div  *ngIf="!AgeValid">
+        Age must be between 20 and 40
+      </div>
+      <br>
+      <div class="form-control">
+        <label for="exampleInputEmail1" class="col-lg-2 col-sm-6">Email</label>
+        <input formControlName="email" type="email" class="col-sm-12 form-control rounded w-50 " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+      </div>
+  
+  
+      <div *ngIf="!EmailValid">
+        Email Must be in email form
+      </div>
+  
+  
+      <div class="form-control">
+      <input type="button" (click)="check()"  class="btn btn-success " value="Register" >
+      </div>
+  
+  
+    </form>
+  
+    </div>
+      </div>
+  </div>
